@@ -13,6 +13,11 @@ openpyxl = "^3.1.2"
 pytest = "^7.4.3"
 isort = "^5.12.0"
 blue = "^0.9.1"
+mkdocs = "^1.5.3"
+taskipy = "^1.12.0"
+mkdocs-material = "^9.4.7"
+pymdown-extensions = "^10.3.1"
+mkdocstrings = "^0.23.0"
 
 
 [build-system]
@@ -22,3 +27,12 @@ build-backend = "poetry.core.masonry.api"
 [tool.isort]
 profile = "black"
 known_third_party = []
+
+[tool.taskipy.tasks]
+format = "isort . && blue ."
+kill = "kill -9 $(lsof -t -i :8000)"
+test = "pytest -v"
+run = """
+python3 app/main.py
+"""
+doc = "mkdocs serve"
