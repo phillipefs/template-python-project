@@ -1,3 +1,3 @@
-# Template Documentation Python Project
+# Documentation
 
-For full documentation visit [My Project ](https://phillipefs.github.io/python-project-template).
+For full documentation visit [My Project ](https://phillipefs.github.io/template-python-project).
