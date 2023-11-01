@@ -2,16 +2,18 @@
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
-## Commands
+## Workflow Example
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+```mermaid
+flowchart LR
+    subgraph pipeline[Pipeline]
+        A[Multiples Excel Files] -->|Extract| B[extract_from_excel]
+        B[extract_from_excel] -->|Transform| C[Generate list Dataframes]
+        C[Generate list Dataframes] -->|Load| D[Consolidate Result]
+    end
+```
 
-## Project layout
+## Functions
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+### ::: app.extract.extract_from_excel
+
