@@ -1,11 +1,12 @@
-import pandas as pd 
 import os
 
+import pandas as pd
 
-def save_dataframe(dataframe: pd.DataFrame, path_save: str, file_name:str):
+
+def save_dataframe(dataframe: pd.DataFrame, path_save: str, file_name: str):
     """
     Save dataframe to excel
-    args: 
+    args:
         dataframe(pd.dataframe): Dataframe to save
         path_save(str): Path save
         file_name(str): File Name
@@ -13,5 +14,5 @@ def save_dataframe(dataframe: pd.DataFrame, path_save: str, file_name:str):
     if not os.path.exists(path_save):
         os.makedirs(path_save)
 
-    dataframe.to_excel(f"{path_save}/{file_name}.xlsx", index=False)
-    return "Load Success"
+    dataframe.to_excel(f'{path_save}/{file_name}.xlsx', index=False)
+    return 'Load Success'

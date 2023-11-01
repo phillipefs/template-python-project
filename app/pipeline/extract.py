@@ -1,17 +1,19 @@
-import os
 import glob
-import pandas as pd
+import os
 from typing import List
 
+import pandas as pd
 
-PATH_FILES = "data/input"
+PATH_FILES = 'data/input'
+
+
 def extract_from_excel(path_files: str) -> List[pd.DataFrame]:
     """
     Read files and convert to dataframe.
     agrs: input_path(str): Path folder files
     return: list dataframes
     """
-    list_files = glob.glob(os.path.join(path_files, "*.xlsx"))
+    list_files = glob.glob(os.path.join(path_files, '*.xlsx'))
 
     list_dataframes = list()
     for file in list_files:
