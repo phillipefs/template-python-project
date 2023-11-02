@@ -268,8 +268,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#workflow-example" class="md-nav__link">
-    Workflow Example
+  <a href="#workflow-project" class="md-nav__link">
+    Workflow Project
   </a>
   
 </li>
@@ -343,8 +343,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#workflow-example" class="md-nav__link">
-    Workflow Example
+  <a href="#workflow-project" class="md-nav__link">
+    Workflow Project
   </a>
   
 </li>
@@ -403,7 +403,7 @@
 
 <h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
 <p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="workflow-example">Workflow Example</h2>
+<h2 id="workflow-project">Workflow Project</h2>
 <pre class="mermaid"><code>flowchart LR
     subgraph pipeline[Pipeline]
         A[Multiples Excel Files] --&gt;|Extract| B[extract_from_excel]
@@ -465,15 +465,29 @@ return: list dataframes</p>
 
 <a id="app.pipeline.transform.concatenate_dataframes"></a>
   <div class="doc doc-contents first">
+  
+      <p>Concatenate list dataframes
+args:
+    list_dataframes(List[pd.DataFrame]): List Dataframes</p>
 
           <details class="quote">
             <summary>Source code in <code>app/pipeline/transform.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">concatenate_dataframes</span><span class="p">(</span>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">concatenate_dataframes</span><span class="p">(</span>
     <span class="n">list_dataframes</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">],</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Concatenate list dataframes</span>
+<span class="sd">    args:</span>
+<span class="sd">        list_dataframes(List[pd.DataFrame]): List Dataframes</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">list_dataframes</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
           </details>
