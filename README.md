@@ -1,4 +1,4 @@
-# Template Python Project
+## Template Python Project
 
 - **Understanding the standard project structure**: This includes the organization of directories, such as source code, tests, documentation, among others.
 
