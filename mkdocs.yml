@@ -1,4 +1,5 @@
 site_name: Template Python Project
+site_url: https://phillipefs.github.io/template-python-project/
 theme:
   name: material
   palette:
