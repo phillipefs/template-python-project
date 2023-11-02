@@ -1,79 +1,72 @@
-# Data Project Starter Kit
+# Template Python Project
 
-## Sobre o Projeto
+- **Understanding the standard project structure**: This includes the organization of directories, such as source code, tests, documentation, among others.
 
-Este repositório é uma parte integrante do workshop "Como estruturar um projeto de dados do Zero". O intuito aqui é fornecer uma base e uma estrutura padronizada para iniciar projetos de engenharia, ciência e análise de dados. O foco principal é em boas práticas, automação, testes e documentação.
+- **Standard structures in data projects**: We will refactor the project using classes, modules, and best practices in an ETL.
 
-### Objetivos do Workshop:
+- **Familiarizing with development tools**: We will cover the use of virtual environments and discuss tools like PIP, CONDA, and POETRY.
 
-* **Entender a estrutura padrão de projetos**: Isso inclui a organização de diretórios, como o código-fonte, testes, documentação, entre outros.
+- **Testing with Pytest**: Ensure that your code works as expected by creating unit and integration tests.
 
-* **Estruturas padrões em projetos de dados**: Vamos refatorar o projeto utilizando classes, módulos e boas práticas em uma ETL.
+- **Version control with Git and GitHub**: Learn how to version your project and use GitHub for collaboration and publishing.
 
-* **Familiarizar-se com ferramentas de desenvolvimento**: Abordaremos o uso de ambientes virtuais e discutiremos ferramentas como PIP, CONDA e POETRY.
+- **Documentation with MKDocs**: You will learn how to document your project with MKDocs and publish your documentation on [GitHub Pages](https://phillipefs.github.io/template-python-project).
 
-* **Testes com Pytest**: Garanta que seu código funcione como esperado, criando testes unitários e de integração.
+- **Automation and CI/CD**: Set up continuous integration and delivery routines to maintain project quality.
 
-* **Versionamento com Git e GitHub**: Aprenda a versionar seu projeto e a usar o GitHub para colaboração e publicação.
+## Getting Started
 
-* **Documentação com MKDocs**: Você vai aprender a documentar seu projeto com MKDocs e a publicar sua documentação no [GitHub Pages](https://phillipefs.github.io/template-python-project)
+### Prerequisites
 
-* **Automatização e CI/CD**: Configurar rotinas de integração e entrega contínua para manter a qualidade do projeto.
+- **VSCode**: It is the code editor we will use in the workshop. [Instructions for installing VSCode here](https://code.visualstudio.com/download).
 
+- **Git and GitHub**:
 
-## Começando
+  1. You must have Git installed on your machine. [Git installation instructions here](https://git-scm.com/book/en/v2).
+  2. You must also have a GitHub account. [GitHub account creation instructions here](https://docs.github.com/en/get-started/onboarding/getting-started-with-your-github-account).
+  3. If you are a Windows user, I recommend this video: [YouTube](https://www.youtube.com/watch?v=_hZf1teRFNg).
+  4. Basic Git and GitHub tutorial [Ebook](https://www.linkedin.com/feed/update/urn:li:activity:7093915148351864832/?updateEntityUrn=urn%3Ali%3Afs_updateV2%3A%28urn%3Ali%3Aactivity:7093915148351864832%2CFEED_DETAIL%2CEMPTY%2CDEFAULT%2Cfalse%29&originTrackingId=4GUdvXH4TK%2BtZtlNHmiqJA%3D%3D).
+  5. If you are already a Git user, I recommend the Akita video: [YouTube](https://www.youtube.com/watch?v=6Czd1Yetaac).
 
-### Pré-requisitos
+- **Pyenv**: It is used to manage Python versions. [Pyenv installation instructions here](https://github.com/pyenv/pyenv#installation). In this project, we will use Python 3.11.5. For Windows users, it is recommended to watch this tutorial [YouTube](https://www.youtube.com/watch?v=TkcqjLu1dgA).
 
-* **VSCode**: É o editor de código que vamos utilizar no workshop. [Instruções de instalação do VSCode aqui](https://code.visualstudio.com/download).
+- **Poetry**: This project uses Poetry for dependency management. [Poetry installation instructions here](https://python-poetry.org/docs/#installation). If you are a Windows user, I recommend watching this video: [YouTube](https://www.youtube.com/watch?v=BuepZYn1xT8), which installs Python, Poetry, and VSCode. But a simple `PIP INSTALL POETRY` command will also work.
 
-* **Git e GitHub**:
+### Installation and Configuration
 
-1. Você deve ter o Git instalado em sua máquina. [Instruções de instalação do Git aqui](https://git-scm.com/book/pt-br/v2).
-2. Você também deve ter uma conta no GitHub. [Instruções de criação de conta no GitHub aqui] (https://docs.github.com/pt/get-started/onboarding/getting-started-with-your-github-account).
-3. Se você for usuário Windows, recomendo esse vídeo: [Youtube](https://www.youtube.com/watch?v=_hZf1teRFNg).
-4. Tutorial de Git e Github básico [Ebook](https://www.linkedin.com/feed/update/urn:li:activity:7093915148351864832/?updateEntityUrn=urn%3Ali%3Afs_updateV2%3A%28urn%3Ali%3Aactivity%3A7093915148351864832%2CFEED_DETAIL%2CEMPTY%2CDEFAULT%2Cfalse%29&originTrackingId=4GUdvXH4TK%2BtZtlNHmiqJA%3D%3D).
-5. Se você já é usuário Git, recomendo o vídeo do Akita: [Youtube](https://www.youtube.com/watch?v=6Czd1Yetaac).
-
-* **Pyenv**: É usado para gerenciar versões do Python. [Instruções de instalação do Pyenv aqui](https://github.com/pyenv/pyenv#installation). Vamos usar nesse projeto o Python 3.11.5. Para usuários Windows, é recomendado assistirem esse tutorial [Youtube](https://www.youtube.com/watch?v=TkcqjLu1dgA).
-
-* **Poetry**: Este projeto utiliza Poetry para gerenciamento de dependências. [Instruções de instalação do Poetry aqui](https://python-poetry.org/docs/#installation).Se você é usuário Windows, recomendo assistir esse vídeo: [Youtube](https://www.youtube.com/watch?v=BuepZYn1xT8). Que instala o Python, Poetry e VSCode. Mas um simples comando PIP INSTALL POETRY já resolve.
-
-### Instalação e Configuração
-
-1. Clone o repositório:
+1. Clone the repository:
 
 ```bash
 git clone https://github.com/phillipefs/template-python-project.git
 cd template-python-project
 ```
 
-2. Configure a versão correta do Python com `pyenv`:
+2. Set the correct Python version with pyenv:
 
 ```bash
 pyenv install 3.11.5
 pyenv local 3.11.5
 ```
 
-3. Instale as dependências do projeto:
+3. Install project dependencies:
 
 ```bash
 poetry install
 ```
 
-4. Ative o ambiente virtual:
+4. Activate the virtual environment:
 
 ```bash
 poetry shell
 ```
 
-5. Execute os testes para garantir que tudo está funcionando como esperado:
+5. Run tests to ensure everything is working as expected:
 
 ```bash
 task test
 ```
 
-6. Execute o comando para ver a documentação do projeto:
+6. Run the command to view the project documentation:
 
 ```bash
 task doc
@@ -85,10 +78,10 @@ task doc
 task run
 ```
 
-8. Verifique na pasta data/output se o arquivo foi gerado corretamente.
+8. Run the pipeline execution command to perform the ETL:
 
-## Contato
+## Contact
 
-Para dúvidas, sugestões ou feedbacks:
+For questions, suggestions, or feedback:
 
 * **Phillipe Santos** - [phillipefs@msn.com](mailto:phillipefs@msn.com)
