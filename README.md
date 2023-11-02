@@ -1,3 +1,3 @@
 ## Documentation
 
-For full documentation visit [My Project ](https://phillipefs.github.io/template-python-project).
+For full documentation visit [link](https://phillipefs.github.io/template-python-project).
