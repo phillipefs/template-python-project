@@ -15,5 +15,8 @@ flowchart LR
 
 ## Functions
 
-### ::: app.extract.extract_from_excel
+### ::: app.pipeline.extract.extract_from_excel
 
+### ::: app.pipeline.transform.concatenate_dataframes
+
+### ::: app.pipeline.load.save_dataframe
